@@ -1,0 +1,65 @@
+body{
+    background-color: #000000;/*цвет всего фона*/
+    font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+}
+/*container
+===============*/
+.conteiner{
+    width:100%;
+    max-width:1170px;
+    margin:0 auto;
+    }
+
+/*header
+=========*/
+.header{
+    width: 100%;
+    position:absolute ;/*делаем текст и лого поверх картинки слоем на всеми*/
+    top:0;
+    left:0;
+    z-index: 1000; 
+}
+.header__inner{
+    display:flex; /*делаем отступ между лого и навигацией*/
+    justify-content: space-between; /*лого будет слева а навигация справа*/
+    align-items: center; /*выравнивание элементов по центру в heider inner по горизонтальной линии*/
+    padding:35px 0;/*отсут сверху шапки и снизу*/
+    border-bottom: 1px solid #515396; /*полоса под логотипом*/
+    }
+/*nav
+=========*/
+.nav{
+    display: flex; /*чтобы все элементы текста навигации были вместе*/
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase; /*все буквы в навигации большие*/
+    }
+.nav__link{
+    margin-left: 50px; /*отступ для каждой ссылки*/
+    color: #ffffff; /*цвет нафигационного текста*/
+    text-decoration: none;/*убираем тип ссылки нижнюю линию*/
+    opacity: .75; /*прозрачность текста 0.75*/
+    transition: opacity .1s  ; /*плавные переходы при прозрачности наведении 1s-2s maximum*/
+    }
+
+    nav__link:first-child{
+        margin-left:0;
+    }/*псевдо класс убирается отступ для первого элемента*/
+nav__link:hover{ /*при наведении на ссылку*/
+  /*  text-decoration: underline;/*происходит подчеркивание*/
+    opacity: 1; /*прозрачность текста при наведении*/
+ 
+    }
+/*intro
+===============*/
+.intro{
+
+    height: 750px;
+    background: #31344e url("intro-bg.png") center no-repeat cover; /*cover чтобы картинказанимала всю высоту и ширину блока,картинка 
+    не повторяется и если вдруг у кого то не прогрузится указан фоновый цвет*/
+
+}
+
+
+/*1045-1414-8204-6725-1813-2232*/
