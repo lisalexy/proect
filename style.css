@@ -1,30 +1,46 @@
-body{
-    background-color: #000000;/*цвет всего фона*/
+body {
+    margin: 0; /*убираем отступы которые идут по умолчанию*/
+    background-color: #f3e9e9;/*цвет всего фона*/ 
+    font-family: 'Raleway', sans-serif; /*если не прогрузиться 1 то будет 2*/
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
-font-family: 'Raleway', sans-serif;
-}
+ }
+
+ *,
+ *:before,
+ *:after {
+    border: 1px solid #fff;
+    box-sizing: border-box; /*алгоритм подсчета тегов блока с учетов педингов и т.д*/
+ }
+ h1, h2,{
+     margin: 0;
+ }
+ p{
+     margin: 0, 0, 10px 0;
+ }
 /*container
-===============*/
-.conteiner{
-    width:100%;
-    max-width:1170px;
-    margin:0 auto;
+===============*/ 
+.conteiner {
+    width:  100%;
+    max-width: 1170px;
+    margin: 0 auto; /*выравнивание по центру сверху справа*/
     }
 
 /*header
 =========*/
-.header{
+.header {
     width: 100%;
-    position:absolute ;/*делаем текст и лого поверх картинки слоем на всеми*/
-    top:0;
-    left:0;
+    height: 100px;
+    position: absolute ;/*делаем текст и лого поверх картинки слоем на всеми*/
+    top: 0;
+    left: 0;
     z-index: 1000; 
-}
-.header__inner{
+ }
+.header__inner {
     display:flex; /*делаем отступ между лого и навигацией*/
     justify-content: space-between; /*лого будет слева а навигация справа*/
     align-items: center; /*выравнивание элементов по центру в heider inner по горизонтальной линии*/
-    padding:35px 0;/*отсут сверху шапки и снизу*/
+    padding: 35px 0;/*отсут сверху шапки и снизу*/
     border-bottom: 1px solid #515396; /*полоса под логотипом*/
     }
 /*nav
@@ -35,31 +51,51 @@ font-family: 'Raleway', sans-serif;
     font-weight: 700;
     text-transform: uppercase; /*все буквы в навигации большие*/
     }
-.nav__link{
+.nav__link {
     margin-left: 50px; /*отступ для каждой ссылки*/
     color: #ffffff; /*цвет нафигационного текста*/
     text-decoration: none;/*убираем тип ссылки нижнюю линию*/
-    opacity: .75; /*прозрачность текста 0.75*/
+    opacity: 0.75; /*прозрачность текста 0.75*/
     transition: opacity .1s  ; /*плавные переходы при прозрачности наведении 1s-2s maximum*/
     }
 
-    nav__link:first-child{
+.nav__link:first-child {
         margin-left:0;
     }/*псевдо класс убирается отступ для первого элемента*/
-nav__link:hover{ /*при наведении на ссылку*/
+
+.nav__link:hover { /*при наведении на ссылку*/
   /*  text-decoration: underline;/*происходит подчеркивание*/
     opacity: 1; /*прозрачность текста при наведении*/
- 
     }
 /*intro
 ===============*/
-.intro{
-
-    height: 750px;
-    background: #31344e url("intro-bg.png") center no-repeat cover; /*cover чтобы картинказанимала всю высоту и ширину блока,картинка 
+.intro 
+{
+    display: flex;
+    flex-direction:column;
+    height:750px;
+    padding-top: 100px;
+    justify-content:center;
+   /* height: 750px;*/
+    background:  #31344e 
+     url("img/Intro-bg.png");
+    /*  no-repeat / cover center; /*cover чтобы картинказанимала всю высоту и ширину блока,картинка 
     не повторяется и если вдруг у кого то не прогрузится указан фоновый цвет*/
 
 }
-
+.intro__inner{
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto; /*выравнивание по центру*/
+}
+ .intro__title {
+    margin: 0;
+font-family: 'Open Sans' , sans-serif;
+font-size: 65px;
+color:#ffffff;
+font-weight: 700;
+text-transform: uppercase;/* заглавные буквы*/
+text-align: center;
+ }
 
 /*1045-1414-8204-6725-1813-2232*/
